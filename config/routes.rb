@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
 
   resources :virtues
-
+  resources :users
   resources :items
   
 end
