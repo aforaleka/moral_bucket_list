@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/dash', to: 'welcome#dash'
   
+
+  resources :virtues
+
+  resources :items
+  
 end
