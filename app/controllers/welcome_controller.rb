@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-	before_action :authenticate_user!, only: [:dash]
+	skip_before_action :authenticate_user!, only: [:index]
 
 	def index
 		
