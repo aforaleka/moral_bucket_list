@@ -1,0 +1,23 @@
+<h1> <%=@user.name%>'s Profile </h1>
+
+
+
+<% @virtues.each do |virtue| %>
+	<p><%= virtue.title %></p>
+	<ul>
+		<% if @is_owner%>
+			<%items = virtue.items%>
+		<% else %>
+			<%items = virtue.items.where(:public => true)%>
+		<%end%>
+
+		<% items.each do |item| %>
+			<li><%= item.name %></li>
+		<% end %>
+	</ul>
+
+	<% if @user == current_user %>
+		<p> Edit | Destroy </p>
+	<% end %>
+	
+<% end %>
