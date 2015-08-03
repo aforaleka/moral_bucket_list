@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#profile'
 
 
-  resources :acts
+
   resources :users
+  resources :acts
+  
 
 end

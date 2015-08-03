@@ -23,9 +23,11 @@ class ActsController < ApplicationController
   end
 
   def destroy
-    @act = Act.find params[:id]
-    @act.destroy
-    redirect_to '/'
+    @user = current_user
+    @act = @user.acts.find(params[:id])
+    @user.acts.delete(@act)
+    
+    redirect_to '/profile'
 
     # if @act.user_id != current_user.id
     #     redirect_to user_path(User.find(@act.user_id))

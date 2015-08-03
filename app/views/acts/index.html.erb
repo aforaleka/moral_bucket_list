@@ -1,4 +1,6 @@
 <h1>Acts index page</h1>
 <% @acts.each do |act| %>
-	<p><%= act.name %> | blurb: <%=act.blurb%> </p>
+	<p><%= link_to act.name, act_path(act) %> | blurb: <%=act.blurb%> </p>
 <% end %>
+
+<%= link_to "add a new act of kindness", new_act_path%>
