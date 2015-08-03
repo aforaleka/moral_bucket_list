@@ -1,0 +1,10 @@
+<h1><%= @act.name %></h1>
+
+<p><%= @act.blurb %></p>
+
+<p>Users with this goal:
+<% @act.users.each do |user| %>
+	<%= user.name %>
+	<br>
+<% end %>
+</p>

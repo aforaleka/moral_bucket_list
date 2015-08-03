@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/dash', to: 'welcome#dash'
   get '/profile', to: 'users#profile'
 
+
   resources :acts
   resources :users
+
 end
