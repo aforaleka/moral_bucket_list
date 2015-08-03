@@ -18,7 +18,8 @@
 	</ul>
 
 	<% if @user == current_user %>
-		<p> Edit | Destroy </p>
+		<p><%=link_to "Edit", edit_user_virtue_path(@user, virtue) %> | 
+		<%= link_to "Delete", user_virtue_path(@user, virtue), method: :delete, data: {confirm: 'Are you sure?'}%></p>
 	<% end %>
 
 <% end %>
