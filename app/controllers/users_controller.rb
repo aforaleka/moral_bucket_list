@@ -15,7 +15,17 @@ class UsersController < ApplicationController
 		@acts = @user.acts
 	end
 
-	
+	def to_do
+		@user = User.find(params[:id])
+		if (@user == current_user)
+			@is_owner = true
+		else
+			@is_owner = false
+		end
+		
+		@acts = @user.acts.where(:completed => false)
+	end
+
 
 
 end
