@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require modernizr.custom.js
+//= require scripts
+//= require overlay-featured
+//= require tweetie
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
