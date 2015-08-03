@@ -2,8 +2,12 @@
 <div class="text-center">
 <h1>Moral Bucket List</h1>
 <h5>Become the person you want to be</h5>
+<%= link_to 'Be inspired', '/' %> |
 <% if current_user %>
-	<%= link_to 'Your Profile', profile_path %>
+	<%= link_to 'Profile', profile_path %> |
+	<%= link_to 'Feed', '/dash' %>
+<% else %>
+	<%= link_to 'Start your journey', '/users/sign_up' %>
 <% end %>
 </div>
 </div>
