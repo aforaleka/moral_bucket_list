@@ -3,6 +3,7 @@
 
 
 <% @virtues.each do |virtue| %>
+
 	<p><%= virtue.title %> : <%= virtue.description%></p>
 	<ul>
 		<% if @is_owner%>
@@ -21,3 +22,4 @@
 	<% end %>
 
 <% end %>
+
