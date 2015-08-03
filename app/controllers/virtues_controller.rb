@@ -2,7 +2,7 @@ class VirtuesController < ApplicationController
   def create
     @user = current_user
     @virtue = @user.virtues.create(virtue_params)
-    redirect to profile_path
+    redirect_to profile_path
   end
 
   def destroy
