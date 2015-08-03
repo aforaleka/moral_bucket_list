@@ -9,28 +9,10 @@
 	puts "creating users"
 	bob = User.create name: "Bob", last_name: "Robert", email: "b@b.com", password: "password"
 	sally = User.create name: "Sally", last_name: "Susan", email: "s@s.com", password: "password"
+	Act.destroy_all
+	puts "creating acts"
+	act1 = Act.create name: "holding the door open"
+	act2 = Act.create name: "volunteering at a soup kitchen"
 
-
-	Virtue.destroy_all
-	puts "creating virtues"
-
-	honesty = Virtue.create title: "honesty", description: "lalala", :public => true
-	gratitude = Virtue.create title: "gratitude", description: "blahblah", :public => true
-	moderation = Virtue.create title: "moderation", description: "rawwww", :public => false
-	empathy = Virtue.create title: "empathy", description: "laaaaa", :public => true
-
-	
-	i1 = Item.create name: "holding the door open", :public => false
-	i2 = Item.create name: "giving food away", :public => true
-	i3 = Item.create name: "working at a soup kitchen", :public => true
-	i4 = Item.create name: "encouraging others", :public => true
-
-	honesty.items << i1 << i2 << i3
-	gratitude.items << i4 << i1
-	moderation.items << i2 << i4
-	empathy.items << i4 << i1
-
-
-	bob.virtues << honesty << gratitude
-
-	sally.virtues << empathy << moderation
+	bob.acts << act1 << act2
+	sally.acts << act1
