@@ -53,8 +53,6 @@ class ItemsController < ApplicationController
 
   private
 
-  
-
     def item_params
       params.require(:item).permit(:public, :name)
     end
