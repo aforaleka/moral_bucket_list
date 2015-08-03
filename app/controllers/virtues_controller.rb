@@ -66,7 +66,7 @@ class VirtuesController < ApplicationController
   private
 
     def verify_virtue_owner
-      if @virtue.user != current_user
+      if @virtue.user_id != current_user.id
         redirect_to virtue_path
         flash.alert = "Invalid Permissions"
       end
