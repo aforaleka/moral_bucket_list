@@ -1,11 +1,10 @@
 <div class="row index-main">
 <div class="text-center">
 <h1>Moral Bucket List</h1>
-<<<<<<< HEAD
-<h3>Become the person you want to be</h3>
+<h5>Become the person you want to be</h5>
+<% if current_user %>
+	<%= link_to 'Your Profile', profile_path %>
+<% end %>
 </div>
 </div>
-=======
 
-<%= link_to 'Your Profile', profile_path %>
->>>>>>> ff95e331ef83d7d807ef0af5014ca7e6baf0b61d

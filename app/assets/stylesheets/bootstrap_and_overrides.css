@@ -12,11 +12,11 @@
     background-color: rgba(255,255,255,0.2);
     padding: 0;
   }
-/*
+
   body {
   	padding: 20px;
+    font-family: 'Lora';
   }
-*/
 
   .container {
     padding: 0;
@@ -25,11 +25,18 @@
 
   .index-main {
     padding: 200px 60px;
-    background-color: rgba(238,255,255,0.2);
-    color: white;
+  }
+
+  .index-main h1{
+    font-size: 5em;
   }
 
   .welcome-statement h3{
-	margin-top: 0;
+	   margin-top: 0;
   }
 
+  h1 {
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-style: normal;
+  }
