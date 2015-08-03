@@ -1,24 +1,11 @@
-<h1> <%=@user.name%>'s Profile </h1>
+<h1> <%=@user.name%>'s Random Acts of Kindness </h1>
 
-<% @virtues.each do |virtue| %>
+<% @acts.each do |act| %>
 
-	<p><%= virtue.title %> : <%= virtue.description%></p>
-	<ul>
-		<% if @is_owner%>
-			<%items = virtue.items%>
-		<% else %>
-			<%items = virtue.items.where(:public => true)%>
-		<%end%>
+	<p><%= act.name %> : <%= act.blurb%></p>
 
-		<% items.each do |item| %>
-			<li><%= item.name %></li>
-		<% end %>
-	</ul>
-
-	<% if @user == current_user %>
-		<p><%=link_to "Edit", edit_user_virtue_path(@user, virtue) %> | 
-		<%= link_to "Delete", user_virtue_path(@user, virtue), method: :delete, data: {confirm: 'Are you sure?'}%></p>
+	<% if @is_owner %>
+		<p> Edit | Destroy </p>
 	<% end %>
-
 <% end %>
 

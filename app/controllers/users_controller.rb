@@ -6,13 +6,13 @@ class UsersController < ApplicationController
 			redirect_to profile_path
 		end
 		@is_owner = false
-		@virtues = @user.virtues.where(:public => true)
+		@acts = @user.acts
 	end
 
 	def profile
 		@is_owner = true
 		@user = current_user
-		@virtues = @user.virtues
+		@acts = @user.acts
 	end
 
 	
