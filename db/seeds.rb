@@ -14,10 +14,10 @@
 	Virtue.destroy_all
 	puts "creating virtues"
 
-	honesty = Virtue.create title: "honesty", :public => true
-	gratitude = Virtue.create title: "gratitude", :public => true
-	moderation = Virtue.create title: "moderation", :public => false
-	empathy = Virtue.create title: "empathy", :public => true
+	honesty = Virtue.create title: "honesty", description: "lalala", :public => true
+	gratitude = Virtue.create title: "gratitude", description: "blahblah", :public => true
+	moderation = Virtue.create title: "moderation", description: "rawwww", :public => false
+	empathy = Virtue.create title: "empathy", description: "laaaaa", :public => true
 
 	
 	i1 = Item.create name: "holding the door open", :public => false

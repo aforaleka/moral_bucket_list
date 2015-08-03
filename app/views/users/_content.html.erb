@@ -3,7 +3,7 @@
 
 
 <% @virtues.each do |virtue| %>
-	<p><%= virtue.title %></p>
+	<p><%= virtue.title %> : <%= virtue.description%></p>
 	<ul>
 		<% if @is_owner%>
 			<%items = virtue.items%>
@@ -19,5 +19,5 @@
 	<% if @user == current_user %>
 		<p> Edit | Destroy </p>
 	<% end %>
-	
+
 <% end %>
