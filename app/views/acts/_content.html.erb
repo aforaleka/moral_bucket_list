@@ -2,7 +2,7 @@
 
 <% @acts.each do |act| %>
 
-	<p><%= act.name %> : <%= act.blurb%></p>
+	<p><%= link_to act.name, act_path(act) %> | blurb: <%=act.blurb%> </p>
 
 	<% if @is_owner %>
 		<%= link_to "Edit", edit_act_path(act)%> | <%= link_to 'Destroy', act_path(act), method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -5,10 +5,15 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/dash', to: 'welcome#dash'
   get '/profile', to: 'users#profile'
+  
 
 
+  resources :users do
+  	member do 
+  		get 'to_do'
+  	end
+  end
 
-  resources :users
   resources :acts
   
 
