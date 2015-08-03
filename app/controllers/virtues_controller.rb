@@ -1,71 +1,49 @@
 class VirtuesController < ApplicationController
-  
-  def index
-  	@virtues = Virtue.all.order(created_at: :desc)
-  	# Virtue.where(public: false).each do |virtue|
-  	# 	if virtue.user != current_user
-  	# 		@virtues = @virtues - [virtue]
-  	# 	end
-  	# end
-  end
-
-  # def myvirtues
-  # 	@virtues = current_user.virtues.order(created_at: :desc)
-  # end
-
-  def new
-    @virtue = Virtue.new
-  end
-
   def create
-    @virtue = current_user.virtues.build(virtue_params)
-    if @virtue.save
-      redirect_to @virtue
-    else
-      render 'new'
-    end
-  end
-
-
-  def show
-    @virtue = Virtue.find params[:id]
-    if (@virtue.user != current_user) && (@virtue.public == false)
-      redirect_to virtues_path
-    end
-
-  end
-
-  def edit
-    @virtue = Virtue.find params[:id]
-    verify_virtue_owner
-  end
-
-  def update
-    @virtue = Virtue.find params[:id]
-    if @virtue.update virtue_params
-      redirect_to @virtue
-    else
-      render 'edit'
-    end
+    @user = current_user
+    @virtue = @user.virtues.create(virtue_params)
+    redirect_to profile_path
   end
 
   def destroy
+
     @virtue = Virtue.find params[:id]
 
-    if @virtue.user != current_user
-        redirect_to virtue_path
+    if @virtue.user_id != current_user.id
+        redirect_to user_path(User.find(@virtue.user_id))
         flash.alert = "Invalid Permissions"
     else 
       @virtue.destroy
-      redirect_to virtues_path
+      redirect_to profile_path
       flash.notice = "Virtue successfully deleted"
     end
   end
 
 
+  def edit
+    verify_virtue_owner
+    @virtue = Virtue.find(params[:id])
+    
+  end
+
+  def update
+    verify_virtue_owner
+    @user = current_user
+    @virtue = Virtue.find(params[:id])
+    if @virtue.update(virtue_params)
+      redirect_to profile_path
+    else
+      render 'edit'
+    end
+  end
+
+  
+
+
   private
 
     def verify_virtue_owner
+      @virtue = Virtue.find(params[:id])
       if @virtue.user_id != current_user.id
         redirect_to virtue_path
         flash.alert = "Invalid Permissions"
