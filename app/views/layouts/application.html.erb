@@ -8,12 +8,18 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
 
+<body>
+<div class="container-fluid">
+<div class="nav-bar">
 <%= render 'layouts/nav' %>
+</div>
+<div class="alert-bar text-right">
 <%= render 'layouts/alerts' %>
-<div class="container">
+</div>
+<div class="content">
 <%= yield %>
+</div>
 </div>
 </body>
 </html>

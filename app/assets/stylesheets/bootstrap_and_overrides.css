@@ -6,29 +6,51 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+  
+  .container-fluid {
+    padding: 0 60px;
+  }
+
+
+  .alert-bar {
+    height: 0;
+    background-color: transparent;
+  }
 
   .alert {
-    background-color: rgba(255,255,255,0.2);
-    padding: 0;
+    padding-top: 60px;
+  }
+  
+  .nav-bar {
+    margin: 20px auto;
+    position: fixed;
+    width: 90%;
+    background-color: transparent;
+    transition: all .5s ease .25s;
+  }
+
+  .nav-title {
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: 1.5em;
   }
 
   body {
-  	padding: 20px;
     font-family: 'Lora';
   }
 
-  .container {
-    padding: 0;
-    width: 100%;
-  }
-
-  .profile, .dash {
-    padding: 40px 60px;
+  .content {
+    padding-top: 60px;
   }
 
   /*welcome#index page*/
   .index-main {
-    padding: 200px 60px;
+    height: 100%;
+    margin: -60px;
+    padding: 330px 60px;
+    background-position: fixed;
+    background: url('http://www.designlovefest.com/wp-content/uploads/downloads/2014/07/WatercolorFloralBorder_by_JulieSongInk1.jpg');
+
   }
 
   .index-main h1{
