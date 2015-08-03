@@ -5,7 +5,7 @@
 	<p><%= act.name %> : <%= act.blurb%></p>
 
 	<% if @is_owner %>
-		<p> Edit | Destroy </p>
+		<%= link_to "Edit", edit_act_path(act)%> | <%= link_to 'Destroy', act_path(act), method: :delete, data: { confirm: 'Are you sure?' } %>
 	<% end %>
 <% end %>
 
