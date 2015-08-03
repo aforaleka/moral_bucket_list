@@ -1,3 +1,9 @@
+<div class="row index-main">
+<div class="text-center">
 <h1>Moral Bucket List</h1>
-
-<%= link_to 'Your Profile', profile_path %>
+<h5>Become the person you want to be</h5>
+<% if current_user %>
+	<%= link_to 'Your Profile', profile_path %>
+<% end %>
+</div>
+</div>
