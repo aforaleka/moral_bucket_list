@@ -19,6 +19,18 @@
 	moderation = Virtue.create title: "moderation", :public => false
 	empathy = Virtue.create title: "empathy", :public => true
 
+	
+	i1 = Item.create name: "holding the door open", :public => false
+	i2 = Item.create name: "giving food away", :public => true
+	i3 = Item.create name: "working at a soup kitchen", :public => true
+	i4 = Item.create name: "encouraging others", :public => true
+
+	honesty.items << i1 << i2 << i3
+	gratitude.items << i4 << i1
+	moderation.items << i2 << i4
+	empathy.items << i4 << i1
+
+
 	bob.virtues << honesty << gratitude
 
 	sally.virtues << empathy << moderation
