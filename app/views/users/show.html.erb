@@ -1,31 +1,12 @@
 
+<%= render 'profile_page' %>
 
-
-
-
-<section id="aboutContent">
-	<div class="container">
-<!--content-->
-	<div id="transmitter">
-    <!--section-->
-    <section id="singlePageContent">
-        <div class="container">
-        	<div class="profile">
-
-				<h1> <%=@user.name%>'s Random Acts of Kindness </h1>
-				<h4> Karma Points: <%=@karma_points%> </h4>
-				<%= render 'acts/content'%>
-
-
-
-				<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-success", :type => "button" %>
-				<br>
-				<br>
-				<%= link_to "Your to do list" , to_do_user_path(@user), :class => "btn btn-info", :type => "button" %>
-
-			</div>
-		</div> 
-	</section> 
-	</div> 
-	</div> 
-</section>
+<%= render 'acts/content'%>
+		<br>
+		<br>
+		
+            
+		<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-success", :type => "button" %>
+		<br>
+		<br>
+		<%= link_to "to do list" , to_do_user_path(@user), :class => "btn btn-info", :type => "button" %>

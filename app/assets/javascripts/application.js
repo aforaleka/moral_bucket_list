@@ -17,3 +17,10 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+   $(".act").hover(function() {
+      $(this).find(".hide").show();
+   });
+});
