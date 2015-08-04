@@ -29,15 +29,13 @@
 
 </head>
 
-<body>
-<div class="container-fluid">
-<div class="nav-bar">
+<body id="bigWrapper" data-target=".navbar-default" data-offset="100">
+
 <%= render 'layouts/nav' %>
-</div>
-<div class="alert-bar text-right">
+
 <%= render 'layouts/alerts' %>
-</div>
-<div class="content">
+
+
 <%= yield %>
 </div>
 </div>

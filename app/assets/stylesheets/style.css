@@ -273,7 +273,7 @@ section .container{
 
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-    color: white;
+    color: black;
     background-color: transparent;
 }
 
@@ -776,7 +776,7 @@ h3 small, h4 small, h5 small{
 /*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/
 
 #intro h1, #intro p, #intro h1.minimal small{
-    color:black;
+    color:white;
 }
 
 #intro h1{
@@ -793,7 +793,7 @@ h3 small, h4 small, h5 small{
 }
 
 #intro a{
-    color:black;
+    color:white;
 }
 
 .introSmallCaption p{
@@ -832,7 +832,7 @@ h3 small, h4 small, h5 small{
 
 
 .introSmallCaption {
-    color: #d5d5d5;
+    color: #fff;
     padding: 20px 20px 0 20px;
 }
 
@@ -872,7 +872,7 @@ h3 small, h4 small, h5 small{
 }
 
 #intro h2, #intro h2 small{
-    color:black;
+    color:white;
 }
 
 #intro .verticallineSeparator{
@@ -886,11 +886,11 @@ h3 small, h4 small, h5 small{
 
 #intro h5 small{
     text-transform:none;
-    color:black;
+    color:white;
 }
 
 #intro p {
-    color:black;
+    color:white;
 }
 
 /*<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->*/

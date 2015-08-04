@@ -1,6 +1,14 @@
+<section id="aboutContent">
+<div class="container">
+<!--content-->
+<div id="transmitter">
+    <!--section-->
+    <section id="singlePageContent">
+        <div class="container">
 <h1>Acts index page</h1>
 <% @acts.each do |act| %>
 	<p><%= link_to act.name, act_path(act) %> | blurb: <%=act.blurb%> </p>
 <% end %>
 
 <%= link_to "add a new act of kindness", new_act_path%>
+</div></section></div></div></section>

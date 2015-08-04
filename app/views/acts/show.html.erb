@@ -1,9 +1,87 @@
-<h1> <%= @act.name %></h1>
-<h2> <%=@act.blurb%></h2>
+<section id="aboutContent">
+<div class="container">
+<!--content-->
+<div id="transmitter">
+    <!--section-->
+    <section id="singlePageContent">
+        <div class="container">
 
-<p>Users with this goal:
-<% @act.users.each do |user| %>
-	<%= user.name %>
-	<br>
-<% end %>
-</p>
+            <div class="row text-center">
+                <h1><%= @act.name %></h1>
+                <ul>
+                    <li class="info-item">
+                        <p>
+                            <span>Karma Points:</span><br>
+                            <%= @act.karma_points %>
+                        </p>
+                    </li>
+                    <li class="info-item">
+                        <p>
+                            <span>People with this goal:</span><br>
+                            <%= @act.users.count %>
+                        </p>
+                    </li>
+   
+                </ul>
+            </div>
+            <!--content-->
+            <div class="content">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                        <!-- article-->
+                        <div id="post">
+
+                            <div id="caption">
+
+                                <p class="excerpt"><%= @act.blurb %>
+                                </p>
+
+                                <p class="excerpt">
+                                    Users with this goal:
+									<% @act.users.each do |user| %>
+										<%= user.name %>
+										<br>
+									<% end %>
+                                </p>
+
+                            </div>
+                        </div>
+                        <!-- end article-->
+                    </div>
+
+
+                </div>
+
+                <!-- <div class="row singleImageWrapper" data-scroll-reveal="enter top move 30px over 1s after 0.2s">
+                    <div class="col-md-12">
+                        <img src="img/background1.jpg" alt="single project Info" class="img-responsive center-block">
+                    </div>
+                </div>
+
+                <div class="row singleImageWrapper" data-scroll-reveal="enter top move 30px over 1s after 0.2s">
+                    <div class="col-md-6">
+                        <img src="img/gallery/1.jpg" alt="single project Info" class="img-responsive center-block">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/gallery/2.jpg" alt="single project Info" class="img-responsive center-block">
+                    </div>
+                </div> -->
+
+
+            </div>
+            <!--end content-->
+
+        </div> <!-- /container -->
+
+    </section>
+    <!--end section-->
+
+</div>
+<!--end content-->
+</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--/* END about SECTION */-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
