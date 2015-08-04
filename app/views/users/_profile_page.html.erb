@@ -8,27 +8,19 @@
                 <li class="info-item">
                     <p>
                         <span>Karma Points:</span><br>
-                        50
+                        <%=@karma_points%>
                     </p>
                 </li>
                 <li class="info-item">
                     <p>
                         <span>Acts completed</span><br>
-                        10
+                        <%=@acts.count%>
                     </p>
                 </li>
 
             </ul>
         </div>
-		<%= render 'acts/content'%>
-		<br>
-		<br>
 		
-            
-		<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-success", :type => "button" %>
-		<br>
-		<br>
-		<%= link_to "Your to do list" , to_do_user_path(@user), :class => "btn btn-info", :type => "button" %>
     </section>
 </div>
 </div>

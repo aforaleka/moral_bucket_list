@@ -61,20 +61,30 @@ class ActsController < ApplicationController
 
    def add_to_do
     @act = Act.find(params[:id])
+    if current_user.acts.include?(@act)
+      redirect_to to_do_user_path(current_user), :alert => "This is already on you to-do list!"
+    else 
+
     @act.completed = false
     @act.save
     current_user.acts << @act
     redirect_to to_do_user_path(current_user)
+    end
    
-   end
+ end
 
-   def add_to_done
+ def add_to_done
     @act = Act.find(params[:id])
+    if current_user.acts.include?(@act)
+      redirect_to act_path(@act), :alert => "You have already added this!"
+    else
     @act.completed = true
     @act.save
     current_user.acts << @act
     redirect_to profile_path
-   end
+    end
+ end
+
   private
 
     # def verify_act_owner
