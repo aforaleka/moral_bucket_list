@@ -1,7 +1,19 @@
 
-<h1> <%=@user.name%>'s To do List </h1>
-<%= render 'acts/content'%>
 
 
+<section id="aboutContent">
+	<div class="container">
+	<!--content-->
+	<div id="transmitter">
+    <!--section-->
+    <section id="singlePageContent">
+        <div class="container">
+		<h1> <%=@user.name%>'s To do List </h1>
+		<%= render 'acts/content'%>
+		<%= link_to "add a new act of kindness", new_act_path%>
+		</div>
+	</section>
+	</div>
+	</div>
+</section>
 
-<%= link_to "add a new act of kindness", new_act_path%>
