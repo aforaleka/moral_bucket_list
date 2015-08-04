@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   #has_many :items, through: :virtues
 
   #has_and_belongs_to_many :acts
-
+  has_many :events
   has_many :lists
   has_many :acts, :through => :lists
   devise :database_authenticatable, :registerable,

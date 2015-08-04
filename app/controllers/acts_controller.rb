@@ -16,6 +16,7 @@ class ActsController < ApplicationController
   def create
     @act = Act.create(act_params)
     if @act.save
+      @event = Event.create user_id: current_user.id, activity: "created new act", act_id: @act.id
       current_user.acts << @act
       redirect_to act_path(@act)
     else
@@ -62,13 +63,18 @@ class ActsController < ApplicationController
    def add_to_do
     @act = Act.find(params[:id])
     if current_user.acts.include?(@act)
-      redirect_to to_do_user_path(current_user), :alert => "This is already on you to-do list!"
+      if current_user.acts.where(:completed => false).include?(@act)
+        redirect_to act_path(@act), :alert => "This is already on your to-do list!"
+      elsif current_user.acts.where(:completed =>true).include?(@act)
+        redirect_to act_path(@act), :alert => "You have already added this to your finished acts!"
+      end 
     else 
 
-    @act.completed = false
-    @act.save
-    current_user.acts << @act
-    redirect_to to_do_user_path(current_user)
+      @act.completed = false
+      @act.save
+      @event = Event.create user_id: current_user.id, activity: "add to do", act_id: @act.id
+      current_user.acts << @act
+      redirect_to to_do_user_path(current_user)
     end
    
  end
@@ -76,10 +82,15 @@ class ActsController < ApplicationController
  def add_to_done
     @act = Act.find(params[:id])
     if current_user.acts.include?(@act)
-      redirect_to act_path(@act), :alert => "You have already added this!"
-    else
+      if current_user.acts.where(:completed => false).include?(@act)
+        redirect_to act_path(@act), :alert => "This is already on your to-do list!"
+      elsif current_user.acts.where(:completed =>true).include?(@act)
+        redirect_to act_path(@act), :alert => "You have already added this to your finished acts!"
+      end
+    else 
     @act.completed = true
     @act.save
+    @event = Event.create user_id: current_user.id, activity: "add to done", act_id: @act.id
     current_user.acts << @act
     redirect_to profile_path
     end
