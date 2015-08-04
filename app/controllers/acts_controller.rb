@@ -39,22 +39,23 @@ class ActsController < ApplicationController
     # end
   end
 
-  # def edit
-  #   verify_act_owner
-  #   @act = Act.find(params[:id])
+   def edit
+    #verify_act_owner
+    @act = current_user.acts.find(params[:id])
     
-  # end
+    
+  end
 
-  # def update
-  #   verify_act_owner
-  #   @user = current_user
-  #   @act = Act.find(params[:id])
-  #   if @act.update(act_params)
-  #     redirect_to profile_path
-  #   else
-  #     render 'edit'
-  #   end
-  # end
+  def update
+    #verify_act_owner
+    @user = current_user
+    @act = @user.acts.find(params[:id])
+      if @act.update(act_params)
+       redirect_to profile_path
+      else
+       render 'edit'
+      end
+   end
 
 
   private
