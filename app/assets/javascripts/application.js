@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require modernizr.custom.js
-//= require overlay-featured
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .

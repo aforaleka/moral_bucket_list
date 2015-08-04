@@ -303,34 +303,7 @@ $(document).ready(function () {
     });
 
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    /* overlay portfolio */
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    $("a.overlay-ajax").click(function(){
-        var url = $(this).attr("href");
-
-        $(".overlay-section").load(url + ' #transmitter');
-        $('.overlay-close img').tooltip();
-        return false;
-    });
-
-    $(".overlay-close").click(function(){
-        $(".overlay-section").empty();
-    });
-
-
-
-    //  no scroll on body when overlay is up
-    $(function () {
-
-        $('a.overlay-ajax').click(function(){
-            $( "body" ).addClass( "noscroll" );
-        });
-
-        $('a.overlay-close').click(function(){
-            $( "body" ).removeClass( "noscroll" );
-        });
-    });
+    
 
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -403,13 +376,6 @@ $(document).ready(function () {
 
 
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    /* twitter init */
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    $('.tweet').twittie({
-        username: 'artbreeze02',
-        list: 'envato-tf',
-        count: 2
-    });
+    
 
 });

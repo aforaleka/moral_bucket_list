@@ -11,11 +11,10 @@
  * file per style scope.
  *
 
- *= require_tree 
+ *= require_tree .
  *= require font-awesome.min
  *= require simple-line-icons
  *= require owl.carousel
- *= require tweetscroll
  *= require style
  *= require responsive
  *= require_self
