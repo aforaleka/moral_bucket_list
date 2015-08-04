@@ -1,12 +1,14 @@
-
-<%= render 'profile_page' %>
-
-<%= render 'acts/content'%>
+<section id="aboutContent">
+<div class="container">
+<div id="transmitter">
+    <section id="singlePageContent">
+		<%= render 'profile_page' %>
+		<%= render 'acts/content'%>
 		<br>
 		<br>
 		
-            
-		<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-success", :type => "button" %>
-		<br>
-		<br>
-		<%= link_to "to do list" , to_do_user_path(@user), :class => "btn btn-info", :type => "button" %>
+		<%= link_to "#{@user.name}'s to do list" , to_do_user_path(@user), :class => "btn btn-info", :type => "button" %>
+ 	</section>
+</div>
+</div>
+</section>

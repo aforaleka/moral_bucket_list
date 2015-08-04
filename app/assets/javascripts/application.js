@@ -21,10 +21,10 @@
 $(function() {
 	$total = $('.act').length;
 	$('.hide-div').hide();
-	
+
 	for(var i = 0; i < $total; i++) {
 		$(".act"+i).mouseenter(function(){
-			$(this).find(".hide-div").show();
+			$(this).find(".hide-div").fadeIn('0.4s');
 		}).mouseleave(function() {
 			$(this).find(".hide-div").hide();			
 		});

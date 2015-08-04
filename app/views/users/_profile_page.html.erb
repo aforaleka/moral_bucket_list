@@ -1,27 +1,19 @@
-<section id="aboutContent">
-<div class="container">
-<div id="transmitter">
-    <section id="singlePageContent">
-        <div class="container profile">
-			<h1 class="row text-center custom-title"> <%=@user.name%>'s Random Acts of Kindness </h1>
-			<ul>
-                <li class="info-item">
-                    <p>
-                        <span>Karma Points:</span><br>
-                        <%=@karma_points%>
-                    </p>
-                </li>
-                <li class="info-item">
-                    <p>
-                        <span>Acts completed</span><br>
-                        <%=@acts.count%>
-                    </p>
-                </li>
+<div class="container profile">
+	<h1 class="row text-center"><span class = "serif"><%=@user.name%>'s Random Acts of Kindness</span></h1>
+	<ul>
+        <li class="info-item">
+            <p>
+                <span>Karma Points:</span><br>
+                <%=@karma_points%>
+            </p>
+        </li>
 
-            </ul>
-        </div>
+        <li class="info-item">
+            <p>
+                <span>Acts completed</span><br>
+                <%=@acts.count%>
+            </p>
+        </li>
+    </ul>
+</div>
 		
-    </section>
-</div>
-</div>
-</section>

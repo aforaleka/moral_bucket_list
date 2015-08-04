@@ -20,6 +20,7 @@ body {
 a{
     color: #252525;
     text-decoration: none;
+    transition: 0.2s;
 }
 
 a:hover, a:focus{
@@ -65,7 +66,7 @@ section{
 
 section .container{
     padding-top:110px;
-    padding-bottom:110px;
+    padding-bottom:200px;
 }
 
 #aboutIntro .container, #servicesIntro .container, #portfolioIntro .container, #contactIntro .container{
@@ -79,30 +80,6 @@ section .container{
     position:relative;
 }
 
-.preloaderLogo{
-    min-width: 200px;
-    max-width: 300px;
-    width: 15%;
-}
-
-
-
-.black-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.8))); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-}
 
 
 
@@ -255,12 +232,13 @@ section .container{
     border-color: transparent;
     -webkit-transition: all .5s ease .25s;
     transition: all .5s ease .25s;
+ 
 }
 .navbar-default .navbar-brand{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Old Standard TT', sans-serif;
     font-weight: 700;
-    text-transform: uppercase;
-    color:white;
+    color: #d5d5d5;
+    font-size: 1.5em;
 }
 
 .navbar-brand .serif{
@@ -296,7 +274,7 @@ section .container{
 
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
+  /*  background-color: white;*/
 }
 
 .affix.navbar-default .navbar-toggle .icon-bar {
@@ -1824,7 +1802,7 @@ h3 small, h4 small, h5 small{
 }
 #singlePageContent ul {
     list-style: none;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     padding: 0;
 }
 
@@ -2010,7 +1988,7 @@ h3 small, h4 small, h5 small{
 }
 
 #singlePageContent .container{
-    padding:70px;
+    padding:60px;
 }
 
 #singlePageContent .container h1{
