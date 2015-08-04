@@ -6,13 +6,13 @@ class UsersController < ApplicationController
 			redirect_to profile_path
 		end
 		@is_owner = false
-		@acts = @user.acts
+		@acts = @user.acts.where(:completed => true)
 	end
 
 	def profile
 		@is_owner = true
 		@user = current_user
-		@acts = @user.acts
+		@acts = @user.acts.where(:completed => true)
 	end
 
 	def to_do
