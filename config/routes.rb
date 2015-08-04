@@ -14,7 +14,12 @@ Rails.application.routes.draw do
   	end
   end
 
-  resources :acts
+  resources :acts do
+  	member do 
+  		get 'add_to_do'
+  		get 'add_to_done'
+  	end
+  end
   
 
 end

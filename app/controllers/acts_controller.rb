@@ -1,6 +1,7 @@
 class ActsController < ApplicationController
-
+ @easy_access = false
   def index
+    @easy_access = true
     @acts = Act.all.order(created_at: :desc)
   end
 
@@ -58,6 +59,22 @@ class ActsController < ApplicationController
    end
 
 
+   def add_to_do
+    @act = Act.find(params[:id])
+    @act.completed = false
+    @act.save
+    current_user.acts << @act
+    redirect_to to_do_user_path(current_user)
+   
+   end
+
+   def add_to_done
+    @act = Act.find(params[:id])
+    @act.completed = true
+    @act.save
+    current_user.acts << @act
+    redirect_to profile_path
+   end
   private
 
     # def verify_act_owner

@@ -9,10 +9,4 @@
 	puts "creating users"
 	bob = User.create name: "Bob", last_name: "Robert", email: "b@b.com", password: "password"
 	sally = User.create name: "Sally", last_name: "Susan", email: "s@s.com", password: "password"
-	Act.delete_all
-	puts "creating acts"
-	act1 = Act.create name: "holding the door open"
-	act2 = Act.create name: "volunteering at a soup kitchen"
-
-	bob.acts << act1 << act2
-	sally.acts << act1
+	

@@ -21,3 +21,9 @@
  *= require_self
 
  */
+
+.act {
+	border: 1px solid grey;
+	padding: 3%;
+
+}
