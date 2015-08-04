@@ -2,5 +2,6 @@
 <div class="profile">
 <%= render 'acts/content'%>
 </div>
-
-<%= link_to "to do list" , to_do_user_path(@user)%>
+<br>
+<p><%= link_to "add a new act of kindness", new_act_path%></p>
+<p><%= link_to "to do list" , to_do_user_path(@user)%></p>
