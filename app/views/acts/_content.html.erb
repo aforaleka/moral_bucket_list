@@ -1,26 +1,25 @@
-
-
-
-
 <% @acts.each do |act| %>
 
-	<div class = "act">
-	<%= link_to act.name, act_path(act) %> | blurb: <%=act.blurb%>
-	<br>
-	<br>
-	
+	<div class="act">
+	<%= link_to act.name, act_path(act) %> <br>
+	<em>-- <%=act.blurb%> --</em>
+	<br><br>
+
+	<div class="hide-div">
 	<% if @is_owner %>
 		
 		<%= link_to "Edit", edit_act_path(act), :class => "btn-sm btn-primary" %> <%= link_to 'Destroy', act_path(act), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn-sm btn-primary" %>
 		
 	<% end %>
-
+	
 	<% if @easy_access %>
+	
 		<%= link_to "add to your to-do list", add_to_do_act_path(act), :class => "btn-sm btn-primary" %>
 		<%= link_to "I've already done this!", add_to_done_act_path(act), :class => "btn-sm btn-primary" %>
 	<%end%>
-	
 	</div>
+	</div>
+	
 	<br>
 <% end %>
 

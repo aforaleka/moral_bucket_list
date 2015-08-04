@@ -1,16 +1,16 @@
 <section id="aboutContent">
 <div class="container">
-<!--content-->
 <div id="transmitter">
-    <!--section-->
     <section id="singlePageContent">
         <div class="container">
-<h1>Random Acts of Kindness</h1>
-<%= render 'acts/content'%>
-<br>
-<br>
-
-<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-success", :type => "button" %>
-				<br>
-				<br>
-</div></section></div></div></section>
+			<h1>Random Acts of Kindness</h1>
+			<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-success", :type => "button" %>
+			<br>
+			<%= render 'acts/content'%>
+			<br>
+			<br>
+		</div>
+	</section>
+</div>
+</div>
+</section>
