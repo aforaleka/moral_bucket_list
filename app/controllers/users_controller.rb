@@ -27,8 +27,14 @@ class UsersController < ApplicationController
 		
 		@acts = @user.acts.where(:completed => false)
 	end
-	private
 
+	def follow
+	end
+
+	def unfollow
+	end
+	
+	private
 	def karma_count(acts)
 		points = 0
 		acts.each do |act|
@@ -37,6 +43,7 @@ class UsersController < ApplicationController
 
 		return points
 	end
+
 
 
 end
