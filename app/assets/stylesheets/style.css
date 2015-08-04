@@ -273,7 +273,7 @@ section .container{
 
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-    color: white;
+    color: black;
     background-color: transparent;
 }
 
@@ -327,7 +327,7 @@ section .container{
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: white;
+    color: #d5d5d5;
 }
 
 .affix.navbar-default .navbar-nav>li>a {
@@ -392,7 +392,7 @@ section .container{
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-    color: #d5d5d5;
+    color: black;
 }
 
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {

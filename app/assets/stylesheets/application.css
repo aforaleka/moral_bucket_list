@@ -24,3 +24,9 @@
 .act em {
 	font-size: smaller;
 }
+
+.alert-bar {
+	margin: 100px 600px 100px 60px;
+	opacity: 0.8;
+	position: fixed;
+}

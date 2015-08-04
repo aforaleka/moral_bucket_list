@@ -3,7 +3,7 @@
 <head>
   <title>Moral Bucket List</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 <!--   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'> -->
@@ -33,12 +33,19 @@
 
 <%= render 'layouts/nav' %>
 
+<div class="alert-bar">
 <%= render 'layouts/alerts' %>
+</div>
 
 <div class = "text-center">
 <%= yield %>
 </div>
 </div>
 </div>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+           <script>
+            $.backstretch('http://tobyharriman.com/wordpress/wp-content/uploads/2013/10/Lost_Lake_Pano.jpg');
+        </script>
+
 </body>
 </html>
