@@ -19,7 +19,14 @@
 
 
 $(function() {
-   $(".act").hover(function() {
-      $(this).find(".hide").show();
-   });
+	$total = $('.act').length;
+	$('.hide-div').hide();
+	
+	for(var i = 0; i < $total; i++) {
+		$(".act"+i).mouseenter(function(){
+			$(this).find(".hide-div").show();
+		}).mouseleave(function() {
+			$(this).find(".hide-div").hide();			
+		});
+	}
 });

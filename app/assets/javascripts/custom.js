@@ -5,12 +5,6 @@ $(document).ready(function () {
 
     "use strict";
 
-    $(".act").hover(
-        function() {
-        $(".hide-div").show();},
-        function() {
-            $(".hide-div").hide();
-        });
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     // text change on click in portfolio

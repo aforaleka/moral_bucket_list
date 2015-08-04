@@ -1,6 +1,6 @@
-<% @acts.each do |act| %>
+<% @acts.each_with_index do |act, i| %>
 
-	<div class="act">
+	<div class="act <%="act#{i}"%>">
 	<%= link_to act.name, act_path(act) %> <br>
 	<em>-- <%=act.blurb%> --</em>
 	<br><br>
