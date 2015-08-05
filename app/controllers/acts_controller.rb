@@ -82,18 +82,19 @@ class ActsController < ApplicationController
 
  def add_to_done
     @act = Act.find(params[:id])
-    if current_user.acts.include?(@act)
-      if current_user.acts.where(:completed => false).include?(@act)
-        redirect_to act_path(@act), :alert => "This is already on your to-do list!"
-      elsif current_user.acts.where(:completed =>true).include?(@act)
+    if current_user.acts.where(:completed => true).include?(@act)
         redirect_to act_path(@act), :alert => "You have already added this to your finished acts!"
-      end
-    else 
-    @act.completed = true
-    @act.save
-    @event = Event.create user_id: current_user.id, activity: "add to done", act_id: @act.id
-    current_user.acts << @act
-    redirect_to user_path(current_user)
+    elsif current_user.acts.where(:completed => false).include?(@act)
+      @act.completed = true
+      @act.save
+      @event = Event.create user_id: current_user.id, activity: "add to done", act_id: @act.id
+      redirect_to user_path(current_user)
+    else
+      @act.completed = true
+      @act.save
+      @event = Event.create user_id: current_user.id, activity: "add to done", act_id: @act.id
+      current_user.acts << @act
+      redirect_to user_path(current_user)
     end
  end
 
