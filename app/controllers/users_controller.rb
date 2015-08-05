@@ -3,10 +3,14 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 
 		if @user == current_user
-			redirect_to profile_path
+			@is_owner = true
+		else
+			@is_owner = false
 		end
-		@is_owner = false
+
+		@to_do = @user.acts.where(:completed => false)
 		@acts = @user.acts.where(:completed => true)
+		
 		@karma_points = karma_count(@acts)
 	end
 
@@ -14,6 +18,7 @@ class UsersController < ApplicationController
 		@is_owner = true
 		@user = current_user
 		@acts = @user.acts.where(:completed => true)
+		@to_do = @user.acts.where(:completed => false)
 		@karma_points = karma_count(@acts)
 	end
 
