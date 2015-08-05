@@ -18,9 +18,13 @@
  *= require_self
  */
 
-/*.nav-pills>li {
+.nav-pills>li {
     float: none;
-}*/
+}
+
+.nav>li {
+    display: inline;
+}
  
 .act em {
 	font-size: smaller;
@@ -1835,13 +1839,10 @@ h3 small, h4 small, h5 small{
 
 
 #singlePageContent ul {
-    margin-bottom: 50px;
-    text-align: center;
-}
-#singlePageContent ul {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding: 0;
+    text-align: center;
 }
 
 #singlePageContent .info-item {
