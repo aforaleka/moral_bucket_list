@@ -39,13 +39,7 @@
                                 <p class="excerpt"><%= @act.blurb %>
                                 </p>
                                 
-                                <p class="excerpt">
-                                    Users with this goal:
-									<% @act.users.each do |user| %>
-										<%= user.name %>
-										<br>
-									<% end %>
-                                </p>
+                                
                                 <br>
 
                                 <%= link_to "add to your to-do list", add_to_do_act_path(@act), :type => "button",  :class => "btn btn-info" %> 
