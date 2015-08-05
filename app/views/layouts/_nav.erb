@@ -17,6 +17,8 @@
             <ul class="nav navbar-nav">
   
 				<% if user_signed_in? %>
+                <li><%= link_to "NewsFeed", public_path %></li>
+                <li><%= link_to "Your Dashboard", friends_path %></li>
                 <li><%= link_to "Profile", profile_path %></li>
                 <li><%= link_to "Random Acts of Kindness", acts_path %></li>
                 <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
