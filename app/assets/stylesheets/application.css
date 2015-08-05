@@ -18,6 +18,10 @@
  *= require_self
  */
 
+/*.nav-pills>li {
+    float: none;
+}*/
+ 
 .act em {
 	font-size: smaller;
 }
@@ -3018,4 +3022,11 @@ iframe{border:0;}
 
 .square {
     height: 200px;
+    margin-top: 20px;
+    margin-bottom: -24px;
+}
+
+.follow-btn {
+    margin-top: 50px;
+    margin-bottom: -20px;
 }
