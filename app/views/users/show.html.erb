@@ -4,20 +4,18 @@
     <section id="singlePageContent">
     
     	<%= image_tag @user.avatar.url(:square), :class => "img-circle square" %>
+    	<%if !@is_owner%>
+	    	<div class="follow-btn">
+				<% if current_user.following?(@user)%>
+					
+					<%= link_to "Unfollow #{@user.name}", unfollow_user_path(@user), :type => "button", :class => "btn btn-danger"%>
+				<% else %>
+					<%= link_to "Follow #{@user.name}", follow_user_path(@user), :type => "button", :class => "btn btn-success"%>
+				<% end %>
+			</div>
+		<% end %>
     
 		<%= render 'profile_page' %>
-		<% if !@is_owner %>
-			<% if current_user.following?(@user)%>
-				
-				<%= link_to "Unfollow #{@user.name}", unfollow_user_path(@user), :type => "button", :class => "btn btn-danger"%>
-			<% else %>
-				<%= link_to "Follow #{@user.name}", follow_user_path(@user), :type => "button", :class => "btn btn-success"%>
-			<% end %>
-		<% end %>
-
-		<br>
-		<br>
-		<br>
 
 		<div class="row">
 		<div class="col-md-6 col-md-offset-3 text-center">
@@ -56,6 +54,7 @@
 		<%= link_to "To do list" , to_do_user_path(@user), :class => "btn btn-info", :type => "button" %>
 
     </section>
+
 </div>
 </div>
 </section>

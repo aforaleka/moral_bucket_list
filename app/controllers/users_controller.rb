@@ -10,18 +10,11 @@ class UsersController < ApplicationController
 
 		@to_do = @user.acts.where(:completed => false)
 		@acts = @user.acts.where(:completed => true)
-		
+
 		@karma_points = karma_count(@acts)
 	end
 
-	def profile
-		@is_owner = true
-		@user = current_user
-		@acts = @user.acts.where(:completed => true)
-		@to_do = @user.acts.where(:completed => false)
-		@karma_points = karma_count(@acts)
-	end
-
+	
 	def to_do
 		@user = User.find(params[:id])
 		if (@user == current_user)

@@ -29,7 +29,8 @@ class ActsController < ApplicationController
     @act = @user.acts.find(params[:id])
     @user.acts.delete(@act)
     
-    redirect_to '/profile'
+    redirect_to user_path(current_user)
+
 
     # if @act.user_id != current_user.id
     #     redirect_to user_path(User.find(@act.user_id))
@@ -53,7 +54,7 @@ class ActsController < ApplicationController
     @user = current_user
     @act = @user.acts.find(params[:id])
       if @act.update(act_params)
-       redirect_to profile_path
+       redirect_to user_path(current_user)
       else
        render 'edit'
       end
@@ -74,7 +75,7 @@ class ActsController < ApplicationController
       @act.save
       @event = Event.create user_id: current_user.id, activity: "add to do", act_id: @act.id
       current_user.acts << @act
-      redirect_to to_do_user_path(current_user)
+      redirect_to user_path(current_user)
     end
    
  end
@@ -92,7 +93,7 @@ class ActsController < ApplicationController
     @act.save
     @event = Event.create user_id: current_user.id, activity: "add to done", act_id: @act.id
     current_user.acts << @act
-    redirect_to profile_path
+    redirect_to user_path(current_user)
     end
  end
 
