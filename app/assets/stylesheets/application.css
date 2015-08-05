@@ -34,7 +34,6 @@
 	
 }
 
-
 html,
 body {
     width:100%;
@@ -2644,7 +2643,9 @@ iframe{border:0;}
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
     color: #fff;
-    background-color: #282828;
+    background-color: grey;
+    text-align: center;
+    display: inline;
 }
 
 .nav-pills>li>a {
@@ -2652,12 +2653,14 @@ iframe{border:0;}
     font-family:'Lato', sans-serif;
     text-transform:uppercase;
     font-size:12px;
-    font-weight:900;
+    font-weight:300;
+    display: inline;
 }
 
 .tab-content{
-
-    padding:10px;
+    padding:0px;
+    margin-top: -13px;
+    /* so that nav-pills look more like tabs*/
 }
 
 .panel-heading {
