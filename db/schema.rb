@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150804194952) do
   add_index "events", ["act_id"], name: "index_events_on_act_id", using: :btree
   add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
+
   create_table "follows", force: :cascade do |t|
     t.integer  "followable_id",                   null: false
     t.string   "followable_type",                 null: false
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150804194952) do
 
   add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
+
 
   create_table "lists", force: :cascade do |t|
     t.integer  "user_id"
@@ -80,8 +82,20 @@ ActiveRecord::Schema.define(version: 20150804194952) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "virtues", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.boolean  "public"
+    t.integer  "user_id"
+  end
+
+  add_index "virtues", ["user_id"], name: "index_virtues_on_user_id", using: :btree
+
   add_foreign_key "events", "acts"
   add_foreign_key "events", "users"
   add_foreign_key "lists", "acts"
   add_foreign_key "lists", "users"
+  
 end
