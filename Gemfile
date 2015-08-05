@@ -33,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'acts_as_follower'
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
