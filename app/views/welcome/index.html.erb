@@ -27,7 +27,7 @@
                             Some description or inspiring sentence.
                         </p>
                         <% if current_user %>
-							<%= link_to 'See your journey', profile_path, class: "btn btn-default btn-white" %>
+							<%= link_to 'See your journey', user_path(current_user), class: "btn btn-default btn-white" %>
 						<% else %>
 							<%= link_to 'Begin your journey', '/users/sign_up', class: "btn btn-default btn-white" %>
 						<% end %>
