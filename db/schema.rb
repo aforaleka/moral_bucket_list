@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20150804194952) do
   add_index "events", ["act_id"], name: "index_events_on_act_id", using: :btree
   add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
-
   create_table "follows", force: :cascade do |t|
     t.integer  "followable_id",                   null: false
     t.string   "followable_type",                 null: false
@@ -51,6 +50,17 @@ ActiveRecord::Schema.define(version: 20150804194952) do
   add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
 
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean  "public"
+  end
+
+  create_table "items_virtues", id: false, force: :cascade do |t|
+    t.integer "item_id",   null: false
+    t.integer "virtue_id", null: false
+  end
 
   create_table "lists", force: :cascade do |t|
     t.integer  "user_id"
@@ -97,5 +107,5 @@ ActiveRecord::Schema.define(version: 20150804194952) do
   add_foreign_key "events", "users"
   add_foreign_key "lists", "acts"
   add_foreign_key "lists", "users"
-  
+  add_foreign_key "virtues", "users"
 end
