@@ -18,6 +18,10 @@
  *= require_self
  */
 
+
+a {
+    color: pink;
+}
 .nav-pills>li {
     float: none;
 }
@@ -2648,7 +2652,7 @@ iframe{border:0;}
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
     color: #fff;
-    background-color: grey;
+    background-color: #939393;
     text-align: center;
     display: inline;
 }
@@ -3023,7 +3027,7 @@ iframe{border:0;}
 
 .square {
     height: 200px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: -24px;
 }
 
