@@ -1,6 +1,6 @@
 <hr class = "intro-divider">
 <% @acts.each_with_index do |act, i| %>
-	<div class = "text-left">
+	<div class = "text-left feed-specific">
 	<div class="act <%="act#{i}"%>">
 	<%= link_to act.name, act_path(act) %> 
 	<br>
@@ -20,8 +20,10 @@
 	
 
 	</div>
-	<hr class="intro-divider">
 	</div>
+	</div>
+	<hr class="intro-divider">
+
 <% end %>
 
 

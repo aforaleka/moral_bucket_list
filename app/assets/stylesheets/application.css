@@ -19,9 +19,32 @@
  */
 
 
-a {
-    color: pink;
+div.text-left.feed-specific {
+    padding-left: 67px;
 }
+
+.tab-pane .act a {
+    color: #7c9dd6;
+}
+
+
+.new-btn {
+    margin: -30px 0 40px 0;
+}
+.main-feed a {
+    color: #7c9dd6;
+    transition: 0.3s;
+}
+
+.main-feed a:hover {
+    color: #5f7498;
+    text-decoration: underline;
+}
+
+.feed-content p {
+    padding-top: 20px;
+}
+
 .nav-pills>li {
     float: none;
 }
