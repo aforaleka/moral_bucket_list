@@ -2,7 +2,8 @@
 <div class="container">
 <div id="transmitter">
     <section id="singlePageContent">
-    <%= image_tag @user.avatar.url(:square), :class => "img-circle" %>
+    <%= image_tag @user.avatar.url(:square), :class => "img-circle square" %>
+    
 		<%= render 'profile_page' %>
 		<%= render 'acts/content'%>
 		<br>
