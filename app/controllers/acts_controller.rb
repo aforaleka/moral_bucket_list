@@ -17,7 +17,7 @@ class ActsController < ApplicationController
     @act = Act.create(act_params)
     if @act.save
       @event = Event.create user_id: current_user.id, activity: "created new act", act_id: @act.id
-      current_user.acts << @act
+      #current_user.acts << @act
       redirect_to act_path(@act)
     else
       render :new
