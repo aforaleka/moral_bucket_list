@@ -8,9 +8,10 @@
         <div class="dash">
 <div class="welcome-statement">
 <h1>Welcome back, <%= current_user.name %></h1>
-<h3>Here's what your friends are up to: </h3>
+<%=image_tag "zigzagsep@2x.png", :class => "img-responsive center-block zigzagSep",:alt => "separator",:width =>"100", :height => "12"%>
+<h4><small>Here's what your friends are up to:</small> </h4>
 </div>
-
+<br>
 <%=render 'events/feed' %>
 
 
