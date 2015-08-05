@@ -1,3 +1,4 @@
+<hr class = "intro-divider">
 <% @acts.each_with_index do |act, i| %>
 
 	<div class="act <%="act#{i}"%>">
@@ -16,9 +17,11 @@
 		<%= link_to "I've already done this!", add_to_done_act_path(act), :class => "btn-sm btn-primary" %>
 	<%end%>
 
+
+
 	</div>
+	<hr class="intro-divider">
 	</div>
-	<br>
 <% end %>
 
 
