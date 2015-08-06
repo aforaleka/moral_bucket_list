@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
 		@to_do = @user.acts.where(:completed => false)
 		@acts = @user.acts.where(:completed => true)
-
+		@friends = @user.followers
 		@karma_points = karma_count(@acts)
 	end
 

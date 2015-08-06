@@ -109,7 +109,7 @@ class ActsController < ApplicationController
     # end
 
     def act_params
-      params.require(:act).permit(:name, :blurb, :completed, :karma_points)
+      params.require(:act).permit(:name, :address, :startdate, :blurb, :completed, :karma_points)
     end
 
 

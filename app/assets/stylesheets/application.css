@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap-datetimepicker
  *= require font-awesome.min
  *= require simple-line-icons
  *= require owl.carousel
@@ -3067,3 +3068,4 @@ iframe{border:0;}
     margin-top: 50px;
     margin-bottom: -20px;
 }
+
