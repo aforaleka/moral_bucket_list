@@ -5,6 +5,14 @@
         <div class="container">
 
 			<h1><span class="serif">Random Acts of Kindness</span></h1>
+
+			<%=form_tag acts_path, method: :get do %>
+			<%= text_field_tag :query, params[:query] %>
+			<%= submit_tag "Search"%>
+			<%end%>
+			<br>
+			<br>
+
 			<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-info", :type => "button" %>
 			
 			<br>

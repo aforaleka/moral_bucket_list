@@ -14,6 +14,7 @@
 				<% end %>
 				
 				<% if @easy_access %>
+				<br>
 					<%= link_to "add to your to-do list", add_to_do_act_path(act), :class => "btn-sm btn-primary" %>
 					<%= link_to "I've already done this!", add_to_done_act_path(act), :class => "btn-sm btn-primary" %>
 				<%end%>

@@ -1,8 +1,15 @@
 class ActsController < ApplicationController
  @easy_access = false
   def index
+    @query = params[:query].presence
     @easy_access = true
-    @acts = Act.all.order(created_at: :desc)
+    if @query
+        @acts = Act.fuzzy_search(@query)
+    else
+      @acts = Act.all
+    end
+    @acts = @acts.order(created_at: :desc)
+    
   end
 
   def show
