@@ -7,7 +7,8 @@
 		<div class = "col-md-4">
 			<%= image_tag friend.avatar.url(:thumb), :class => "img-circle thumb" %>
 			<br>
-			<%= friend.name %>
+			<%=link_to friend.name, user_path(friend)%>
+			<br>
 		</div>
 		
 
