@@ -19,6 +19,13 @@
  *= require_self
  */
 
+.empty {
+    height: 100px;
+}
+
+div.row.text-center.add-new-btn {
+    margin-top: 200px;
+}
 
 .intro-heading, .navbar-brand {
     font-family: 'Open Sans', sans-serif;
