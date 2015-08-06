@@ -19,7 +19,9 @@
  */
 
 
-
+.intro-heading, .navbar-brand {
+    font-family: 'Open Sans', sans-serif;
+}
 
 p.excerpt {
     margin-top: 40px;
@@ -310,10 +312,11 @@ section .container{
  
 }
 .navbar-default .navbar-brand{
-    font-family: 'Old Standard TT', sans-serif;
-    font-weight: 700;
+    font-family: 'Lato';
+    font-weight: 400;
     color: #d5d5d5;
     font-size: 1.5em;
+    letter-spacing: 2px;
 }
 
 .navbar-brand .serif{
