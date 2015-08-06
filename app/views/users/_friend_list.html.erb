@@ -1,0 +1,15 @@
+<div class = "row">
+<br>
+<br>
+<div class = "col-md-8 col-md-offset-2">
+<% @friends.each do |friend| %>
+	
+		<div class = "col-md-4">
+			<%= image_tag friend.avatar.url(:thumb), :class => "img-circle thumb" %>
+			<br>
+			<%= friend.name %>
+		</div>
+		
+
+<%end%>
+</div>
