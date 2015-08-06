@@ -19,14 +19,20 @@
  */
 
 
-div.text-left.feed-specific {
-    padding-left: 67px;
+
+
+p.excerpt {
+    margin-top: 40px;
 }
 
-.tab-pane .act a {
+div.text-left.feed-specific {
+    padding-left: 117px;
+}
+
+
+.tab-pane .act a, .acts-index .act a {
     color: #7c9dd6;
 }
-
 
 .new-btn {
     margin: -30px 0 40px 0;

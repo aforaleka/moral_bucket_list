@@ -4,12 +4,18 @@
     <section id="singlePageContent">
         <div class="container">
 			<h1><span class="serif">Random Acts of Kindness</span></h1>
-			
+			<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-info", :type => "button" %>
 			<br>
+			<br>
+			<br>
+			<div class="row acts-index">
+			<div class="col-md-8 col-md-offset-2">
 			<%= render 'acts/content'%>
+			</div>
+			</div>
 			<br>
 			<br>
-			<%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-success", :type => "button" %>
+			
 		</div>
 	</section>
 </div>

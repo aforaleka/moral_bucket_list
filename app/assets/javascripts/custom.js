@@ -6,34 +6,6 @@ $(document).ready(function () {
     "use strict";
 
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    // text change on click in portfolio
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-        $(".filterAll").click(function(){
-            $(".activeFilter h3 span").text(function(){
-                return 'all';
-            });
-        });
-
-
-        $(".filterGraphics").click(function(){
-            $(".activeFilter h3 span").text(function(){
-                return 'graphics';
-            });
-        });
-
-        $(".filterVideo").click(function(){
-            $(".activeFilter h3 span").text(function(){
-                return 'video';
-            });
-        });
-
-        $(".filterMix").click(function(){
-            $(".activeFilter h3 span").text(function(){
-                return 'mix';
-            });
-        });
-
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     //process section navigation
