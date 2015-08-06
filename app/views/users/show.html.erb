@@ -47,16 +47,25 @@
 	        	</div>
 	        </div>
         </div>
-
+	
 		<br>
 		<br>
-
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="empty">
+			</div>
+		</div>
+		
+		<div class="row">
 		<% if @is_owner %>
-	        <div class="row text-center add-new-btn">
+	        <div class="text-center add-new-btn">
 	            <%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-info", :type => "button" %>
 	                
 	        </div>
     	<% end %>
+    	</div>
     </section>
 
 </div>
