@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805100220) do
+ActiveRecord::Schema.define(version: 20150806100229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150805100220) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "address"
+    t.datetime "startdate"
   end
 
   create_table "events", force: :cascade do |t|
@@ -49,18 +50,6 @@ ActiveRecord::Schema.define(version: 20150805100220) do
 
   add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
-
-  create_table "items", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "public"
-  end
-
-  create_table "items_virtues", id: false, force: :cascade do |t|
-    t.integer "item_id",   null: false
-    t.integer "virtue_id", null: false
-  end
 
   create_table "lists", force: :cascade do |t|
     t.integer  "user_id"
@@ -96,20 +85,8 @@ ActiveRecord::Schema.define(version: 20150805100220) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "virtues", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.boolean  "public"
-    t.integer  "user_id"
-  end
-
-  add_index "virtues", ["user_id"], name: "index_virtues_on_user_id", using: :btree
-
   add_foreign_key "events", "acts"
   add_foreign_key "events", "users"
   add_foreign_key "lists", "acts"
   add_foreign_key "lists", "users"
-  add_foreign_key "virtues", "users"
 end

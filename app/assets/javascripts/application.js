@@ -15,6 +15,9 @@
 //= require modernizr.custom.js
 //= require twitter/bootstrap
 //= require turbolinks
+//= require moment
+//= require bootstrap-datetimepicker
+//= require pickers
 //= require_tree .
 
 

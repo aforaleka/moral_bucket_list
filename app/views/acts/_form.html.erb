@@ -1,6 +1,6 @@
 <div class = "row">
   <div class = "col-md-6 col-md-offset-3">
-<%= form_for @act do |f| %>
+<%= simple_form_for @act do |f| %>
 	
 
 	<% if @act.errors.present? %>
@@ -10,15 +10,18 @@
 	<% end %>
 
 	<p>
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
+    <%= f.input :name %><br>
  	</p>
 
  	<p>
-    <%= f.label :blurb %><br>
-    <%= f.text_area :blurb %>
+    <%= f.input :blurb %><br>
  	</p>
-
+  <p>
+  <%=f.input :startdate, as: :datetime_picker, :class => "btn-primary", :label => '(optional) Date & Time: '%>
+  </p>
+  <p>
+    <%= f.input :address, :label => "(optional) Address: "%>
+  </p>
  	<p>
  	<%= f.label :karma_points %><br>
     <%= f.number_field :karma_points, in: 1..5 %>
