@@ -9,9 +9,9 @@
 	    	<div class="follow-btn">
 				<% if current_user.following?(@user)%>
 					
-					<%= link_to "Unfollow #{@user.name}", unfollow_user_path(@user), :type => "button", :class => "btn btn-danger"%>
+					<%= link_to "Friend #{@user.name}", unfollow_user_path(@user), :type => "button", :class => "btn btn-danger"%>
 				<% else %>
-					<%= link_to "Follow #{@user.name}", follow_user_path(@user), :type => "button", :class => "btn btn-success"%>
+					<%= link_to "Unfriend #{@user.name}", follow_user_path(@user), :type => "button", :class => "btn btn-success"%>
 				<% end %>
 			</div>
 		<% end %>
