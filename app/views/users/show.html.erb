@@ -4,6 +4,7 @@
     <section id="singlePageContent">
     
     	<%= image_tag @user.avatar.url(:square), :class => "img-circle square" %>
+
     	<%if !@is_owner%>
 	    	<div class="follow-btn">
 				<% if current_user.following?(@user)%>
@@ -13,51 +14,49 @@
 					<%= link_to "Follow #{@user.name}", follow_user_path(@user), :type => "button", :class => "btn btn-success"%>
 				<% end %>
 			</div>
-		<% else %>
-			<div class="row text-center follow-btn">
-				<%= link_to "Add new act", new_act_path, :class => "btn btn-success", :type => "button" %>
-				
-			</div>
 		<% end %>
     
 		<%= render 'profile_page' %>
 		<br>
 
-
-
-
 		<div class="row">
-		<div class="col-md-6 col-md-offset-3 text-center">
-            <ul id="myTabPills" class="nav nav-pills" role="tablist">
+			<div class="col-md-6 col-md-offset-3 text-center profile-tabs">
+	            <ul id="myTabPills" class="nav nav-pills" role="tablist">
 
-                <li class="active"><a href="#completed" role="tab" data-toggle="tab">Completed Acts</a></li>
-                <li><a href="#todo" role="tab" data-toggle="tab">To-do List</a></li>
-                <li><a href="#friends-list" role="tab" data-toggle="tab">Friends</a></li>
-            </ul>
+	                <li class="active"><a href="#completed" role="tab" data-toggle="tab">Completed Acts</a></li>
+	                <li><a href="#todo" role="tab" data-toggle="tab">To-do List</a></li>
+	                <li><a href="#friends-list" role="tab" data-toggle="tab">Friends</a></li>
+	            </ul>
 
-            <div id="myTabContentPills" class="tab-content">
-                <div class="tab-pane fade in active" id="completed">
-                	
-                    <%= render 'acts/content'%>
-                </div>
+	            <div id="myTabContentPills" class="tab-content">
+	                <div class="tab-pane fade in active" id="completed">
+	                	
+	                    <%= render 'acts/content'%>
+	                </div>
 
-                <div class="tab-pane fade" id="todo">
-                    <%=render 'users/todo_tab'%>
-                </div>
+	                <div class="tab-pane fade" id="todo">
+	                    <%=render 'users/todo_tab'%>
+	                </div>
+
 
                 <div class="tab-pane fade" id="friends-list">
                 	<%= render 'users/friend_list' %>
             	</div>
 
-        	</div>
-        </div>
+
+	        	</div>
+	        </div>
         </div>
 
 		<br>
 		<br>
-		
 
-		
+		<% if @is_owner %>
+	        <div class="row text-center add-new-btn">
+	            <%= link_to "add a new act of kindness", new_act_path, :class => "btn btn-info", :type => "button" %>
+	                
+	        </div>
+    	<% end %>
     </section>
 
 </div>

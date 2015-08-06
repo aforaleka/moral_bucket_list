@@ -2,23 +2,23 @@
 <div class = "text-left feed-specific">
 <% @to_do.each_with_index do |act, i| %>
 
-	<div class="act <%="act#{i}"%>">
-	<%= link_to act.name, act_path(act) %> 
-	<br>
-	<div class="hide-div">
-	<em>-- <%=act.blurb%> --</em>
-	<br>
+	<div class = "text-left feed-specific">
+		<div class="act <%="act#{i}"%>">
+			<%= link_to act.name, act_path(act) %> 
+			<br>
+			<div class="hide-div">
+			<em>-- <%=act.blurb%> --</em>
+			<br>
 
-	<% if @is_owner %>
-		<%= link_to 'Destroy', act_path(act), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn-sm btn-primary" %> <%= link_to "I did it!", add_to_done_act_path(act), :class => "btn-sm btn-primary" %>
-	<% end %>
-	
-	
-
+			<% if @is_owner %>
+				<%= link_to 'Destroy', act_path(act), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn-sm btn-primary" %> <%= link_to "I did it!", add_to_done_act_path(act), :class => "btn-sm btn-primary" %>
+			<% end %>
 
 
+			</div>
+		</div>
 	</div>
+
 	<hr class="intro-divider">
-	</div>
 <% end %>
 </div>
