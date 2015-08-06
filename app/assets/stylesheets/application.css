@@ -18,6 +18,33 @@
  *= require_self
  */
 
+
+div.text-left.feed-specific {
+    padding-left: 67px;
+}
+
+.tab-pane .act a {
+    color: #7c9dd6;
+}
+
+
+.new-btn {
+    margin: -30px 0 40px 0;
+}
+.main-feed a {
+    color: #7c9dd6;
+    transition: 0.3s;
+}
+
+.main-feed a:hover {
+    color: #5f7498;
+    text-decoration: underline;
+}
+
+.feed-content p {
+    padding-top: 20px;
+}
+
 .nav-pills>li {
     float: none;
 }
@@ -2648,7 +2675,7 @@ iframe{border:0;}
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
     color: #fff;
-    background-color: grey;
+    background-color: #939393;
     text-align: center;
     display: inline;
 }
@@ -3023,7 +3050,7 @@ iframe{border:0;}
 
 .square {
     height: 200px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: -24px;
 }
 

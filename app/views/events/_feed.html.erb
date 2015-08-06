@@ -1,11 +1,12 @@
 <hr class="intro-divider">
+<div class="main-feed">
 <% @events.each do |event| %>
 	<div class = "row">
 		<div class = "col-md-8 col-md-offset-2">
 		<div class = "col-md-3 text-center">
 		<%= image_tag User.find(event.user_id).avatar.url(:thumb), :class => "img-circle thumb" %>
 		</div>
-		<div class = "col-md-9 text-left">
+		<div class = "col-md-9 text-left feed-content">
 			<p><%=link_to User.find(event.user_id).name, user_path(User.find(event.user_id))%> 
 			<% if event.activity == "created new act" %>
 			 added a new act of kindness: 
@@ -20,3 +21,4 @@
 	</div>
 <hr class="intro-divider">
 <%end%>
+</div>
