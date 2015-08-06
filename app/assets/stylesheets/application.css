@@ -831,6 +831,7 @@ h3 small, h4 small, h5 small{
 
 #intro h1, #intro p, #intro h1.minimal small{
     color:white;
+    text-shadow: 1px 1px grey;
 }
 
 #intro h1{
@@ -909,6 +910,7 @@ h3 small, h4 small, h5 small{
     font-weight:700;
     letter-spacing:-1px;
     font-style:italic;
+    text-shadow: 1px 1px grey;
 }
 
 
