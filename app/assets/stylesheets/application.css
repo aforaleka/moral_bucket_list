@@ -815,6 +815,7 @@ h3 small, h4 small, h5 small{
 
 }
 
+
 .socialWrapper:hover .socialIcon-effect-1a .socialIcon{
     background: rgba(0,0,0,1);
 }
@@ -834,6 +835,7 @@ h3 small, h4 small, h5 small{
 
 #intro h1, #intro p, #intro h1.minimal small{
     color:white;
+    text-shadow: 1px 1px grey;
     
 }
 
@@ -906,6 +908,7 @@ h3 small, h4 small, h5 small{
     font-style:normal;
     text-transform: none;
     font-weight:300;
+    text-shadow: 1px 1px grey;
 }
 
 .introSmallCaption h4{
@@ -913,6 +916,7 @@ h3 small, h4 small, h5 small{
     font-weight:700;
     letter-spacing:-1px;
     font-style:italic;
+
 
 }
 
