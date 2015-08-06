@@ -29,12 +29,12 @@ class UsersController < ApplicationController
 	def follow
 		@user = User.find(params[:id])
 		if current_user == @user
-			flash[:alert] = "You cannot follow yourself!"
+			flash[:alert] = "You cannot friend yourself!"
 		elsif current_user.following?(@user)
-			flash[:alert] = "You already follow this person!"
+			flash[:alert] = "You already friend this person!"
 		else 
 			current_user.follow(@user)
-			flash[:notice] = "Successfully followed #{@user.name}!"
+			flash[:notice] = "Successfully friended #{@user.name}!"
 		end
 
 		redirect_to user_path(@user)
@@ -46,10 +46,10 @@ class UsersController < ApplicationController
 		if current_user == @user
 			flash[:alert] = "Invalid Action!"
 		elsif !current_user.following?(@user)
-			flash[:alert] = "You do not follow this person!"
+			flash[:alert] = "You are not friends with this person!"
 		else 
 			current_user.stop_following(@user)
-			flash[:notice] = "Successfully unfollowed #{@user.name}!"
+			flash[:notice] = "Successfully unfriended #{@user.name}!"
 		end
 		redirect_to user_path(@user)
 	end
