@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-md-offset-4 col-md-4 introSmallCaption text-center">
                         <p>
-                            Some description or inspiring sentence.
+                            “It is good people who make good places.” 
                         </p>
                         <% if current_user %>
 							<%= link_to 'See your journey', user_path(current_user), class: "btn btn-default btn-white" %>
@@ -50,13 +50,17 @@
                 <div class="row">
                     <div class="col-md-offset-3 col-md-6 text-center">
                         <h2 data-scroll-reveal="enter left move 10px over 1s after 0.2s">
-                            <span class="serif">Welcome</span> 
+                            <span class="serif">“There's no such thing as a small act of kindness. Every act creates a ripple with no logical end.”</span> 
                         </h2>
 
                         <!-- <img src="img/incline-white.png" class="inclineLine center-block" alt="incline"> -->
 
                         <p data-scroll-reveal="enter left move 10px over 1s after 0.3s">
-                            Inspired by the article The Moral Bucket List, we created this website to encourage you to become a better self. We believe that everyone has the potential to grow and give more love to the world. There are many random acts of kindness you can do in your daily life, and we want you to challenge yourself to do them. By creating and sharing them on our website, you remind yourself you can be a better you.
+                            <!--Inspired by the article The Moral Bucket List, we created this website to encourage you to become a better self. We believe that everyone has the potential to grow and give more love to the world. There are many random acts of kindness you can do in your daily life, and we want you to challenge yourself to do them. By creating and sharing them on our website, you remind yourself you can be a better you.-->
+
+                            There is a lot of random unkindess in the world, often people don't realize how a little counterforce goes a long way. Our goal is to help people celebrate random acts of kindness and share them with friends and fellow do-gooders. It is our strong belief that technology can actually<em> aid </em>personal growth and remind us that success isn't being better than others, rather it is being better than you used to be. 
+
+
                         </p>
                     </div>
                 </div>
@@ -83,15 +87,27 @@
                 <!--header-->
                 <div class="row sectionIntro">
                     <div class="col-md-6 col-md-offset-3 text-center"  data-scroll-reveal="enter top move 10px over 1s after 0.2s">
-                        <h1><span>About Us</span></h1>
+                        <h1><span>How it Works</span></h1>
 
                         <img src="assets/incline-white.png" class="inclineLine center-block" alt="incline">
-                        <h3><span class="serif">We want to make the world a better place.</span></h3>
+                        <h4><span class="serif">“Be kind, for everyone you meet is fighting a harder battle.”</span></h4>
 
                         <img src="assets/zigzagsep.png" class="img-responsive center-block zigzagSep" alt="separator">
 						
 						<p data-scroll-reveal="enter left move 10px over 1s after 0.3s">
-                            Aleka and Vicki blah blah blah.
+                            <div class = "col-md-4 text-center">
+                           <h1><i class="fa fa-gift"></i></i></h1>
+                           <p>Browse the newsfeed or the Acts of Random Kindness to see what your fellow do-gooders are up to.</p>
+                            </div>
+                            <div class = "col-md-4 text-center">
+                            <h1> <i class="fa fa-check-square-o"></i></h1>
+                            <p>Add acts to your to-do list or to your completed acts if you've done them already to get more Karma Points!</p>
+                            </div>
+                            <div class = "col-md-4 text-center">
+                            <h1><i class="fa fa-child"></i></h1>
+                            <p>Friend people to see what their up to via the Friend Feed and plan to do random acts of kindness together.</p>
+                            </div>
+
                         </p>
                     </div>
                 </div>
@@ -114,11 +130,20 @@
 
                         <div class="col-md-6 col-sm-6 col-xs-12 footerBox">
 
-                            <h4>About Moral Bucket List</h4>
-                            <div class="lineSeparator"></div>
+                            <h4>Moral Bucket List</h4>
+                            
                             <p>
-                                Our final project for iXperience.
+                                Vicki and Alecka's final project for iXperience.
                             </p>
+                            <div class = "col-md-8 col-md-offset-2">
+                            <div class = "col-md-6">
+                            <%= image_tag("vicki.jpg", size: "90", :class => "img-circle") %>
+                            </div>
+
+                            <div class = "col-md-6 text-center ">
+                            <%= image_tag("aleka.jpg", size: "90", :class => "img-circle") %>
+                            </div>
+                            </div>
 
                         </div>
 
@@ -128,13 +153,14 @@
 
                         <div class="col-md-6 col-sm-6 col-xs-12 footerBox">
                             <h4>Contact Us</h4>
-                            <div class="lineSeparator"></div>
+                            <h4><i class="fa fa-envelope-o"></i> </h4>
+                            
                             <div class="row">
 
                                 <div class="col-md-12">
                                     <ul class="infoContact">
-                                        <li><a href="mailto:aforaleka@gmail.com?Subject=Hello" target="_top"><i class="fa fa-envelope-o"></i> aforaleka@gmail.com</a></li>
-                                        <li><a href="mailto:someone@example.com?Subject=HelloAgain" target="_top">support@mail.com</a></li>
+                                        <li><a href="mailto:aforaleka@gmail.com?Subject=Hello" target="_top"> aforaleka@gmail.com</a></li>
+                                         <li><a href="mailto:vickiliu@umich.edu?Subject=Hello" target="_top"> vickiliu@umich.edu</a></li>
                                     </ul> 
                                 </div>
                             </div>
