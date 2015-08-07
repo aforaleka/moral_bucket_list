@@ -4,7 +4,7 @@ class ActsController < ApplicationController
     @query = params[:query].presence
     @easy_access = true
     if @query
-        @acts = Act.fuzzy_search(@query)
+        @acts = Act.basic_search(@query)
     else
       @acts = Act.all
     end
