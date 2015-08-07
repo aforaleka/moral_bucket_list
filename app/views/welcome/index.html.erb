@@ -16,7 +16,7 @@
                     </div> -->
                     <div class="col-md-offset-2 col-md-8 text-center">
 
-                       <div class = "head-tag"> <h1>Moral Bucket List</h1></div>
+                       <div class = "head-tag"> <h1><small>muditā</small></h1></div>
 
                     </div>
                 </div>
@@ -24,7 +24,8 @@
                 <div class="row">
                     <div class="col-md-offset-4 col-md-4 introSmallCaption text-center">
                         <p>
-                            “It is good people who make good places.” 
+                            (n.) delight in the happiness of others;
+                             <br>a state of sympathetic, vicarious joy
                         </p>
                         <% if current_user %>
 							<%= link_to 'See your journey', user_path(current_user), class: "btn btn-default btn-white" %>
@@ -128,30 +129,35 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-md-6 col-sm-6 col-xs-12 footerBox">
+                        <div class="col-md-4 col-sm-4 col-xs-12 footerBox">
 
-                            <h4>Moral Bucket List</h4>
+                            <h4>muditā:</h4>
                             
                             <p>
                                 Vicki and Alecka's final project for iXperience.
+                                <br> August 2015. Cape Town, South Africa
                             </p>
-                            <div class = "col-md-8 col-md-offset-2">
-                            <div class = "col-md-6">
-                            <%= image_tag("vicki.jpg", size: "90", :class => "img-circle") %>
-                            </div>
-
-                            <div class = "col-md-6 text-center ">
-                            <%= image_tag("aleka.jpg", size: "90", :class => "img-circle") %>
-                            </div>
-                            </div>
+                            
 
                         </div>
+                         <div class="col-md-4 col-sm-4 col-xs-12 footerBox">
+
+                         <div class = "col-md-5 text-left">
+                            <%= image_tag("vicki.jpg", size: "150", :class => "img-circle") %>
+                            </div>
+                            <div class = "col-md-2">
+                            </div>
+
+                            <div class = "col-md-5 text-right ">
+                            <%= image_tag("aleka.jpg", size: "150", :class => "img-circle") %>
+                            </div>
+                         </div>
 
 
                     
 
 
-                        <div class="col-md-6 col-sm-6 col-xs-12 footerBox">
+                        <div class="col-md-4 col-sm-4 col-xs-12 footerBox">
                             <h4>Contact Us</h4>
                             <h4><i class="fa fa-envelope-o"></i> </h4>
                             

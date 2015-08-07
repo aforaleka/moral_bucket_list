@@ -838,7 +838,8 @@ h3 small, h4 small, h5 small{
 
 #intro h1, #intro p, #intro h1.minimal small{
     color:white;
-    text-shadow: 1px 1px grey;
+    text-shadow: 1px 1px #4A4343;
+    text-transform: none;
     
 }
 
@@ -903,7 +904,7 @@ h3 small, h4 small, h5 small{
     font: 14px/24px 'Open Sans', sans-serif;
     font-style:normal;
     text-transform: none;
-    font-weight:300;
+    font-weight:400;
 }
 
 .introSmallCaption p.minimal{
@@ -911,7 +912,7 @@ h3 small, h4 small, h5 small{
     font-style:normal;
     text-transform: none;
     font-weight:300;
-    text-shadow: 1px 1px grey;
+    text-shadow: 1px 1px #4A4343;
 }
 
 .introSmallCaption h4{
@@ -921,16 +922,18 @@ h3 small, h4 small, h5 small{
     font-style:italic;
 
 
+
 }
 
 
 .introSmallCaption h4.minimal{
     font-family: 'Raleway', sans-serif;
-    font-weight:900;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing:-3px;
     font-style:normal;
     font-size:36px;
+
 }
 
 #intro .btn{
@@ -3075,5 +3078,9 @@ iframe{border:0;}
 .follow-btn {
     margin-top: 50px;
     margin-bottom: -20px;
+}
+
+.head-tag h1 small {
+    color: white;
 }
 
