@@ -10,7 +10,7 @@
 				<br>
 
 				<% if @is_owner %>
-					 <%= link_to 'Destroy', act_path(act), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn-sm btn-primary" %>
+					 <%= link_to 'Remove', act_path(act), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn-sm btn-primary" %>
 				<% end %>
 				
 				<% if @easy_access %>
