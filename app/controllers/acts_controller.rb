@@ -1,5 +1,6 @@
 class ActsController < ApplicationController
  @easy_access = false
+
   def index
     @query = params[:query].presence
     @easy_access = true
@@ -24,7 +25,6 @@ class ActsController < ApplicationController
     @act = Act.create(act_params)
     if @act.save
       @event = Event.create user_id: current_user.id, activity: "created new act", act_id: @act.id
-      #current_user.acts << @act
       redirect_to act_path(@act)
     else
       render :new
