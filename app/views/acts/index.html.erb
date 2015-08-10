@@ -7,9 +7,10 @@
 			<h1><span class="serif">Random Acts of Kindness</span></h1>
 
 			<%=form_tag acts_path, method: :get do %>
-			<%= text_field_tag :query, params[:query] %>
-			<%= submit_tag "Search"%>
+				<%= text_field_tag :query, params[:query] %>
+				<%= submit_tag "Search"%>
 			<%end%>
+
 			<br>
 			<br>
 
@@ -17,10 +18,11 @@
 			
 			<br>
 			<br>
+
 			<div class="row acts-index">
-			<div class="col-md-8 col-md-offset-2">
-			<%= render 'acts/content'%>
-			</div>
+				<div class="col-md-8 col-md-offset-2">
+					<%= render 'acts/content'%>
+				</div>
 			</div>
 			<br>
 			<br>

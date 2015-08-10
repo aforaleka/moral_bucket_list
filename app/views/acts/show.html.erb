@@ -35,10 +35,16 @@
                         <div id="post">
 
                             <div id="caption">
-                            <br>
+                                <br>
                                 <p class="excerpt"><%= @act.blurb %></p>
-                                <p class = "excerpt">Starting Time: <%= @act.startdate%></p>
-                                <p class = "excerpt">Address : <%= @act.address%></p>
+
+                                <% if @act.startdate %>
+                                    <p class = "excerpt">Starting Time: <%= @act.startdate%></p>
+                                <% end %>
+
+                                <% if @act.address %>
+                                    <p class = "excerpt">Address : <%= @act.address%></p>
+                                <% end %>
                                 
                                 <br>
 

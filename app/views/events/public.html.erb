@@ -1,28 +1,22 @@
 <section id="aboutContent">
 <div class="container">
-<!--content-->
 <div id="transmitter">
-    <!--section-->
     <section id="singlePageContent">
         <div class="container">
-        <div class="dash">
-<div class="welcome-statement">
-<h1>Hello, <%= current_user.name %></h1>
-<%=image_tag "zigzagsep@2x.png", :class => "img-responsive center-block zigzagSep",:alt => "separator",:width =>"100", :height => "12"%>
-<h4><small>See what everyone is up to:</small> </h4>
-</div>
-<br>
+	        <div class="dash">
+				<div class="welcome-statement">
 
-<%=render 'events/feed' %>
+					<h4><small>See what everyone is up to:</small> </h4>
+					<%=image_tag "zigzagsep@2x.png", :class => "img-responsive center-block zigzagSep",:alt => "separator",:width =>"100", :height => "12"%>
 
+				</div>
+				<br>
 
+				<%=render 'events/feed' %>
 
-
-
-
-</div>
-</div>
-</section>
+			</div>
+			</div>
+	</section>
 </div>
 </div>
 </section>
